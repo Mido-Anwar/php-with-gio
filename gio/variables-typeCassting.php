@@ -30,7 +30,7 @@
         define('STATUS_' . $paid, $paid);
         echo "The value of STATUS is: " . constant('STATUS_' . $paid);
         echo "<br>";
-      //variable variables in PHP
+        //variable variables in PHP
         $varName = "Hello";
         $$varName = "World"; // This creates a variable named $Hello with the value "World"
         echo "The value of variable variable is: " . $Hello; // Outputs "World"
@@ -59,9 +59,11 @@
         print_r($arrayVar);
         echo "<br>";
         // 6. Object: An instance of a class, which can contain properties and methods
-        class MyClass {
+        class MyClass
+        {
             public $property = "I am a property";
-            public function myMethod() {
+            public function myMethod()
+            {
                 return "I am a method";
             }
         }
@@ -87,13 +89,28 @@
         $result = $mixedVar + 5; // PHP converts the string to an integer
         echo "Result of type juggling: " . $result; // Outputs 10, as "5 apples" is converted to 5
         echo "<br>";
-       /* declare(strict_types=1); */
+        /* declare(strict_types=1); */
         // Enforces strict typing, which means types must match exactly
-        
-        function addNumbers(int $a, int $b): int {
+
+        function addNumbers(int $a, int $b): int
+        {
             return $a + $b;
         }
         echo "Sum of 5 and 10: " . addNumbers(5, 10);
+        echo "<br>";
+        // heredoc & nowdoc syntax
+        $heredoc = <<<EOD
+This is a heredoc string.
+It can span multiple lines and supports variables like $stringVar.
+EOD;
+        echo "Heredoc: " . nl2br($heredoc);
+        echo "<br>";
+
+        $nowdoc = <<<'EOD'
+This is a nowdoc string.
+It can also span multiple lines but does not parse variables like $stringVar.
+EOD;
+        echo "Nowdoc: " . nl2br($nowdoc);
         echo "<br>";
 
         ?>
