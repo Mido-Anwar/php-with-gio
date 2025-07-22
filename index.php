@@ -13,7 +13,7 @@
     <div class="links">
         <a href="gio/basicsofphp.php"> basic of php </a>
         <a href="gio/variables-typeCassting.php"> variables & type casting </a>
-        <a href="public/dice-roll.php"> dice roll </a>
+        <a href="gio/arrays.php"> arrays </a>
     </div>
 
  
