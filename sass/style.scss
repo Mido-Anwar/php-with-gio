@@ -6,9 +6,10 @@
 }
 
 body {
-    background-color: #7e7c7c;
+    background-color: #b1afaf;
     color: #333;
     line-height: 1.6;
+    padding: 20px;
 }
 h1, h2, h3 {
     color: #2c3e50;
@@ -18,10 +19,7 @@ h1, h2, h3 {
     flex-direction: column;
     gap: 10px;
 }
-body{
-    padding: 20px;
 
-}
 form{
     height: auto;
     display: flex;
@@ -35,4 +33,12 @@ form{
 input{
     height:30px;
     
+}
+a{
+    color: #033f7b;
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+    transition: color 0.3s;
+    text-shadow: #033f7b 1px 1px 2px;
 }

@@ -14,6 +14,8 @@
         <a href="gio/basicsofphp.php"> basic of php </a>
         <a href="gio/variables-typeCassting.php"> variables & type casting </a>
         <a href="gio/arrays.php"> arrays </a>
+        <a href="gio/oprator.php"> operators </a>
+        <a href="gio/controlStructures.php"> control structures </a>
     </div>
 
  
