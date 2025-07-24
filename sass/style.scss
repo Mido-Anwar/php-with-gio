@@ -6,13 +6,13 @@
 }
 
 body {
-    background-color: #b1afaf;
+    background-color: #f2efef;
     color: #333;
     line-height: 1.6;
     padding: 20px;
 }
 h1, h2, h3 {
-    color: #2c3e50;
+    color: #cd293c;
 }
 .links{
     display: flex;
@@ -37,8 +37,11 @@ input{
 a{
     color: #033f7b;
     text-decoration: none;
-    font-size: large;
+    font-size: 1.2em;
     font-weight: bold;
     transition: color 0.3s;
     text-shadow: #033f7b 1px 1px 2px;
+}
+p{
+    color: blue;
 }

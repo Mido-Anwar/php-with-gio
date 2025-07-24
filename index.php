@@ -16,9 +16,10 @@
         <a href="gio/arrays.php"> arrays </a>
         <a href="gio/oprator.php"> operators </a>
         <a href="gio/controlStructures.php"> control structures </a>
+        <a href="gio/functions.php"> functions </a>
     </div>
 
- 
+
 </body>
 
 </html>
