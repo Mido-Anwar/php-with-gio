@@ -51,18 +51,60 @@ return ; // This function does not return any value
 <li><strong>void</strong>: Indicates that a function does not return a value.</li>
 <li><strong>null</strong>: Represents a variable with no value or an empty value.</li>";
 
+    echo "<h2>Function arguments & params </h2>";
 
+    function add(int $a, int $b): int
+    {
+        return $a + $b;
+    }
+    echo "<p>In the above example, the function <code>add</code> takes two parameters of type <code>int</code> and returns their sum as an <code>int</code>.</p>";
+    echo "<p>Function arguments are the values passed to a function when it is called, while parameters are the variables defined in the function declaration that accept those values.</p>";
+    echo "<h2>Function return type</h2>";
+    function multiply(int $a, int $b): int
+    {
+        return $a * $b;
+    }
 
+    $x = 5;
+    $y = &$x; // $y is a reference to $x
+    $y = 7;
+    // Changing $y will also change $x
+    echo "<p>In the above example, the function <code>multiply</code> takes two parameters of type <code>int</code> and returns their product as an <code>int</code>.</p>";
+    echo "<p>Function return type specifies the type of value that a function will return. It is defined after the function parameters using a colon followed by the type.</p>";
+    echo "<h2>Function references</h2>";
+    echo "<p>In the above example, <code>$y</code> is a reference to <code>$x</code>. Any changes made to <code>$y</code> will also affect <code>$x</code>.</p>";
+    function num_sum(...$numbers): int
+    {
+        $sum = 0;
+        foreach ($numbers as $number) {
+            $sum += $number;
+        }
+        return $sum;
+    }
+    $numbers = [1, 2, 3, 4, 5];
+    num_sum(...$numbers);
+    echo "<p>In the above example, the function <code>num_sum</code> takes a variable number of arguments using the <code>...</code> syntax and returns their sum as an <code>int</code>.</p>";
+    echo "<h2>Function variable number of arguments</h2>";
+    echo "<p>In the above example, the function <code>num_sum</code> can accept any number of arguments, and it will sum them up and return the total.</p>";
 
+    $z = 'num_sum';
+    echo "<h2>Function variable name</h2>";
+    echo "<p>In the above example, the variable <code>\$z</code> holds the name of the function <code>num_sum</code>. You can call the function using the variable like this: <code>\$z(...\$numbers)</code>.</p>";
+    echo "<h2>Function variable name with variable number of arguments</h2>";
+    echo "<p>In the above example, you can call the function <code>num_sum</code> using the variable <code>\$z</code> and pass the variable number of arguments using the spread operator <code>...</code>.</p>";
+    echo "<h2>Function variable name with variable number of arguments</h2>";
+    echo "<p>In the above example, you can call the function <code>num_sum</code> using the variable <code>\$z</code> and pass the variable number of arguments using the spread operator <code>...</code>.</p>";
+    echo "<h2>Function variable name with variable number of arguments</h2>";
+    echo $z(...$numbers);
 
+    echo "<p>In the above example, we define an anonymous function that takes a parameter <code>\$name</code> and returns a greeting message. You can call it like this
+    : <code>echo \$anonymousFunction('John');</code>.</p>";
+    echo "<h2>Anonymous function</h2>";
 
-
-
-
-
-
-
-
+    echo "anonymous function";
+    $anonymousFunction = function ($name) {
+        return "Hello, $name!";
+    };
 
 
 
