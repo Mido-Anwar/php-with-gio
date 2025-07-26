@@ -17,6 +17,8 @@
         <a href="gio/oprator.php"> operators </a>
         <a href="gio/controlStructures.php"> control structures </a>
         <a href="gio/functions.php"> functions </a>
+        <a href="gio/bulitInFunction.php"> built in functions </a>
+        <a href="gio/fileSystem.php"> file system </a>
     </div>
 
 
