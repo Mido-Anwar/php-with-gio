@@ -11,14 +11,15 @@
 
 <body>
     <div class="links">
-        <a href="gio/basicsofphp.php"> basic of php </a>
-        <a href="gio/variables-typeCassting.php"> variables & type casting </a>
-        <a href="gio/arrays.php"> arrays </a>
-        <a href="gio/oprator.php"> operators </a>
-        <a href="gio/controlStructures.php"> control structures </a>
-        <a href="gio/functions.php"> functions </a>
-        <a href="gio/bulitInFunction.php"> built in functions </a>
-        <a href="gio/fileSystem.php"> file system </a>
+        <a href="app/basicsofphp.php"> basic of php </a>
+        <a href="app/variables-typeCassting.php"> variables & type casting </a>
+        <a href="app/arrays.php"> arrays </a>
+        <a href="app/oprator.php"> operators </a>
+        <a href="app/controlStructures.php"> control structures </a>
+        <a href="app/functions.php"> functions </a>
+        <a href="app/bulitInFunction.php"> built in functions </a>
+        <a href="app/fileSystem.php"> file system </a>
+        <a href="app/ex1.php"> exercise 1 </a>
     </div>
 
 

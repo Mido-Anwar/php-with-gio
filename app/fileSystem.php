@@ -22,16 +22,16 @@
         mkdir("new_directory");
     }
     echo "<p>Created a new directory named <code>new_directory</code>.</p>";
-    file_put_contents("new_directory/example.txt", "Hello, World!");
-    filesize("new_directory/example.txt");
+    file_put_contents("new_directory/monthmoney.txt", "Hello, World!");
+    filesize("new_directory/monthmoney.txt");
 
    
 
 
-    echo "<p>Created a file named <code>example.txt</code> in the <code>new_directory</code> with the content 'Hello, World!'.</p>";
-    $fileContent = file_get_contents("new_directory/example.txt");
-    echo "<p>Content of <code>example.txt</code>: $fileContent</p>";
-    $file = fopen("new_directory/example.txt", "r");
+    echo "<p>Created a file named <code>monthmoney.txt</code> in the <code>new_directory</code> with the content 'Hello, World!'.</p>";
+    $fileContent = file_get_contents("new_directory/monthmoney.txt");
+    echo "<p>Content of <code>monthmoney.txt</code>: $fileContent</p>";
+    $file = fopen("new_directory/monthmoney.txt", "r");
     while ($line = fgets($file) == false) {
         echo "<p>Read line: $file</p>";
         echo "<p>Read line: $line</p>";
