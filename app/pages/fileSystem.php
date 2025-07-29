@@ -1,6 +1,6 @@
 <?php
 // 
-require_once 'exercise1_0/config.php';
+require_once 'config.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,5 +1,6 @@
 <?php
-require_once 'exercise1_0/functions.php';
+require_once "config.php";
+require_once APP . 'exercise1_0/functions.php';
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +10,7 @@ require_once 'exercise1_0/functions.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>exercise 1</title>
-    <link rel="stylesheet" href="../sass/style.css">
+    <link rel="stylesheet" href="../../sass/style.css">
 </head>
 
 <body>
@@ -23,6 +24,9 @@ require_once 'exercise1_0/functions.php';
             <input type="text" name="amount" placeholder="amount" required>
             <input type="submit" name="submit" value="submit">
         </form>
+        <?php
+ // إغلاق الملف بعد القراءة
+        ?>
     </div>
 </body>
 
