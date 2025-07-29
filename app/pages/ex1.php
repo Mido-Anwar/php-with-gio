@@ -1,5 +1,5 @@
 <?php
-
+require_once 'exercise1_0/functions.php';
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@
 
 <body>
     <div>
-        <form action="new_directory/calc.php" method="post">
+        <form action="exercise1_0/functions.php " method="post">
             <label for="date"></label>
             <input type="date" name="date" placeholder="date" required>
             <label for="discription"></label>

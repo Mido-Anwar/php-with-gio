@@ -11,15 +11,15 @@
 
 <body>
     <div class="links">
-        <a href="app/basicsofphp.php"> basic of php </a>
-        <a href="app/variables-typeCassting.php"> variables & type casting </a>
-        <a href="app/arrays.php"> arrays </a>
-        <a href="app/oprator.php"> operators </a>
-        <a href="app/controlStructures.php"> control structures </a>
-        <a href="app/functions.php"> functions </a>
-        <a href="app/bulitInFunction.php"> built in functions </a>
-        <a href="app/fileSystem.php"> file system </a>
-        <a href="app/ex1.php"> exercise 1 </a>
+        <a href="app/pages/basicsofphp.php"> basic of php </a>
+        <a href="app/pages/variables-typeCassting.php"> variables & type casting </a>
+        <a href="app/pages/arrays.php"> arrays </a>
+        <a href="app/pages/oprator.php"> operators </a>
+        <a href="app/pages/controlStructures.php"> control structures </a>
+        <a href="app/pages/functions.php"> functions </a>
+        <a href="app/pages/bulitInFunction.php"> built in functions </a>
+        <a href="app/pages/fileSystem.php"> file system </a>
+        <a href="app/pages/ex1.php"> exercise 1 </a>
     </div>
 
 
