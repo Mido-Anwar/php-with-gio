@@ -15,17 +15,54 @@ require_once APP . 'exercise1_0/functions.php';
 
 <body>
     <div>
-        <form action="exercise1_0/functions.php " method="post">
+        <form action="../exercise1_0/functions.php" method="post">
             <label for="date"></label>
-            <input type="date" name="date" placeholder="date" required>
+            <input type="date" name="date" placeholder="date">
             <label for="discription"></label>
-            <input type="text" name="discription" placeholder="discription" required>
+            <input type="text" name="discription" placeholder="discription">
             <label for="amount"></label>
-            <input type="text" name="amount" placeholder="amount" required>
+            <input type="text" name="amount" placeholder="amount">
             <input type="submit" name="submit" value="submit">
         </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                // قراءة البيانات من الملف وعرضها في الجدول
+                $file = fopen(APP . DIRECTORY_SEPARATOR . "exercise1_0" . DIRECTORY_SEPARATOR . "dataSheet.txt", "r");
+                if ($file) {
+                
+                    while (($line = fgets($file)) !== false ) {
+                       
+                        $data = explode(',', $line);
+                
+                        if (count($data) == 3) {
+                            echo "<tr>";
+                            echo "<td> \t " . htmlspecialchars(trim($data[0])) . " </td>";
+                            echo "<td> \t " . htmlspecialchars(trim($data[1])) . " </td>";
+                            echo "<td> \t " . htmlspecialchars(trim($data[2])) . " </td>";
+                            echo "</tr>  ";
+                        }
+                      
+                    }
+                    fclose($file);
+                } else {
+                    echo "<tr><td colspan='3'>Unable to open file.</td></tr>";
+                }
+                ?>
+            </tbody>
+        </table>
+
         <?php
- // إغلاق الملف بعد القراءة
+        // فتح الملف للقراءة
+        $file = fopen(APP . DIRECTORY_SEPARATOR . "exercise1_0" . DIRECTORY_SEPARATOR . "dataSheet.txt", "r");
+        // إغلاق الملف بعد القراءة
         ?>
     </div>
 </body>
