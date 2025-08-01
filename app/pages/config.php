@@ -1,7 +1,7 @@
 <?php
 
 define("APP",dirname(__dir__).DIRECTORY_SEPARATOR);
-define("PAGES",dirname(__file__).DIRECTORY_SEPARATOR);  ;
+define("PAGES",dirname(__file__).DIRECTORY_SEPARATOR);  
 define("CONFIG",realpath(__file__)) ;
 define("STYLE","/media/mido/WORK/php/php-work/php-with-gio/sass/style.css");
 

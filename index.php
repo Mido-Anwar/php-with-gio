@@ -1,4 +1,7 @@
-
+<?php
+require_once "vendor/autoload.php";
+use App\Employee\EmployeeClass;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,18 +14,22 @@
 
 <body>
     <div class="links">
-        <a href="app/pages/basicsofphp.php"> basic of php </a>
-        <a href="app/pages/variables-typeCassting.php"> variables & type casting </a>
-        <a href="app/pages/arrays.php"> arrays </a>
-        <a href="app/pages/oprator.php"> operators </a>
-        <a href="app/pages/controlStructures.php"> control structures </a>
-        <a href="app/pages/functions.php"> functions </a>
-        <a href="app/pages/bulitInFunction.php"> built in functions </a>
-        <a href="app/pages/fileSystem.php"> file system </a>
-        <a href="app/pages/ex1.php"> exercise 1 </a>
-        <a href="app/pages/oop.php"> oop </a>
-    </div>
+        <a href="app/Pages/basicsofphp.php"> basic of php </a>
+        <a href="app/Pages/variables-typeCassting.php"> variables & type casting </a>
+        <a href="app/Pages/arrays.php"> arrays </a>
+        <a href="app/Pages/oprator.php"> operators </a>
+        <a href="app/Pages/controlStructures.php"> control structures </a>
+        <a href="app/Pages/functions.php"> functions </a>
+        <a href="app/Pages/bulitInFunction.php"> built in functions </a>
+        <a href="app/Pages/fileSystem.php"> file system </a>
+        <a href="app/Pages/ex1.php"> exercise 1 </a>
+        <a href="app/Pages/OopLessons.php"> oop </a>
 
+    </div>
+<?php
+var_dump(new EmployeeClass("mido", 33, "school"));
+
+?>
 
 </body>
 

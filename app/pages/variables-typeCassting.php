@@ -59,17 +59,7 @@
         print_r($arrayVar);
         echo "<br>";
         // 6. Object: An instance of a class, which can contain properties and methods
-        class MyClass
-        {
-            public $property = "I am a property";
-            public function myMethod()
-            {
-                return "I am a method";
-            }
-        }
-        $objectVar = new MyClass();
-        echo "Object: " . $objectVar->property . " and " . $objectVar->myMethod();
-        echo "<br>";
+    // class
         // 7. NULL: A special type that represents a variable with no value.
         $nullVar = null;
         echo "NULL: " . ($nullVar === null ? 'null' : 'not null');
