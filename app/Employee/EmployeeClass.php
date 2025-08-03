@@ -9,6 +9,8 @@ class EmployeeClass
     public int $age;
     public string $position;
     private float $salary;
+    private int $id;
+    protected string $gender;
 
     public function __construct(string $name, int $age, string $position)
     {
@@ -43,3 +45,4 @@ class EmployeeClass
         return $this->salary;
     }
 }
+

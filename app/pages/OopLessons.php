@@ -4,7 +4,8 @@ declare(strict_types=1);
 require "../../vendor/autoload.php";
 // alias name for classes;
 use \App\Employee\ProfileClass;
-use \App\Employee\EmployeeClass;
+use \App\Employee\EmployeeClass; 
+use \App\Employee\MangerClass;
 // oop.php
 // This file is intended to demonstrate Object-Oriented Programming (OOP) concepts in PHP.
 // It is currently empty and can be filled with OOP examples as needed.
@@ -51,14 +52,31 @@ use \App\Employee\EmployeeClass;
     $obj = (object) $arr;
     var_dump($obj);
     var_dump(new ProfileClass("mido", 37, "web dev"));
+ 
+
+    var_dump(ProfileClass::STATUS);
+    echo ProfileClass::class ."<br>";
+
     echo "</pre>";
+    echo "count of object ".  ProfileClass::$count;
 
     echo "<br>";
     echo "<pre>";
     // global name space built in class
     var_dump(new \DateTime());
-    echo "</pre>";
+    var_dump(new MangerClass("mido", 37, "web dev")->setSalary(400)->getSalary());
 
+    echo "</pre>";
+$inps = [
+new \App\Inputs\Text("textmido"),
+new \App\Inputs\Radio("radiomido"),
+new \App\Inputs\Checkbox("checkmido"),
+
+
+];
+foreach($inps as $inp){
+    echo $inp->render() . "<br/>";
+}
 
 
 
