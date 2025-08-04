@@ -8,7 +8,9 @@ abstract class  InputAbstract
 
 {
 
-    public function __construct(protected string $name) {}
+    public function __construct(protected string $name) {
+        
+    }
 
 
     abstract  public function render(): string;
