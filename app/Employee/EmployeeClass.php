@@ -3,7 +3,9 @@
 namespace App\Employee;
 
 
-class EmployeeClass
+use APP\Employee\EmployeeIF;
+
+class EmployeeClass implements EmployeeIF
 {
     public string $name = "mido_anwar";
     public int $age;
@@ -17,6 +19,10 @@ class EmployeeClass
         $this->name = $name;
         $this->age = $age;
         $this->position = $position;
+    }
+    public function bounceCollect()
+    {
+        return "hello";
     }
 
     public function setSalary(float $salary): EmployeeClass
@@ -45,4 +51,3 @@ class EmployeeClass
         return $this->salary;
     }
 }
-
