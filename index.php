@@ -1,5 +1,9 @@
 <?php
 require_once "vendor/autoload.php";
+use App\CoffeeMaker\CoffeeMaker;
+use App\CoffeeMaker\Cappuccino;
+use App\CoffeeMaker\Latte;
+use App\CoffeeMaker\AllCoffeesWay;
 use App\Employee\EmployeeClass;
 
 class A{
@@ -10,7 +14,7 @@ class A{
         return static::$name;
     }
     public static function make(){
-        // return same static object
+        // return same object
         return static::class;
     }
 }
@@ -45,10 +49,34 @@ class B extends A{
 
     </div>
 <?php
-echo(A::get_name()).PHP_EOL;
-echo(B::get_name()).PHP_EOL;
-var_dump(A::make());
-var_dump(B::make());
+//echo(A::get_name()).PHP_EOL;
+//echo(B::get_name()).PHP_EOL;
+//var_dump(A::make());
+//var_dump(B::make());
+
+$coffee = new CoffeeMaker();
+echo $coffee->makeCoffee();
+echo "*____________________* \n";
+$cappuccino = new Cappuccino();
+echo $cappuccino->makeCoffee();
+echo $cappuccino->cappuccinoMaker();
+echo "*____________________* \n";
+
+$latte = new Latte();
+echo $latte ->makeCoffee();
+echo $latte->latteMaker();
+echo "*____________________* \n";
+
+$allCoffee = new AllCoffeesWay();
+echo $allCoffee->makeCoffee();
+echo $allCoffee->latteMaker();
+echo $allCoffee->cappuccinoMaker();
+echo "*____________________* \n";
+
+
+
+
+
 
 
 
