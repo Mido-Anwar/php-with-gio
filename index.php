@@ -1,6 +1,24 @@
 <?php
 require_once "vendor/autoload.php";
 use App\Employee\EmployeeClass;
+
+class A{
+    public static $name ='A';
+
+    public static function get_name():string{
+        // late static binding
+        return static::$name;
+    }
+    public static function make(){
+        // return same static object
+        return static::class;
+    }
+}
+
+class B extends A{
+    public static $name ='B';
+
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +45,12 @@ use App\Employee\EmployeeClass;
 
     </div>
 <?php
-var_dump(new EmployeeClass("mido", 33, "school"));
+echo(A::get_name()).PHP_EOL;
+echo(B::get_name()).PHP_EOL;
+var_dump(A::make());
+var_dump(B::make());
+
+
 
 ?>
 
