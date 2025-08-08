@@ -71,6 +71,8 @@ $allCoffee = new AllCoffeesWay();
 echo $allCoffee->makeCoffee();
 echo $allCoffee->latteMaker();
 echo $allCoffee->cappuccinoMaker();
+echo $allCoffee->machineName;
+
 echo "*____________________* \n";
 
 

@@ -7,5 +7,8 @@ use App\CoffeeMaker\LatteTrait;
 class AllCoffeesWay extends CoffeeMaker
 {
 
-    use CappuccinoTrait, LatteTrait;
+    use CappuccinoTrait{
+     machineName as public;
+    };
+    use LatteTrait;
 }
