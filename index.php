@@ -55,23 +55,23 @@ class B extends A{
 //var_dump(B::make());
 
 $coffee = new CoffeeMaker();
-echo $coffee->makeCoffee();
+echo $coffee->makeCoffee().'<br>';
 echo "*____________________* \n";
 $cappuccino = new Cappuccino();
-echo $cappuccino->makeCoffee();
-echo $cappuccino->cappuccinoMaker();
+echo $cappuccino->makeCoffee().'<br>';
+echo $cappuccino->cappuccinoMaker().'<br>';
 echo "*____________________* \n";
 
 $latte = new Latte();
-echo $latte ->makeCoffee();
-echo $latte->latteMaker();
+echo $latte ->makeCoffee().'<br>';
+echo $latte->latteMaker().'<br>';
 echo "*____________________* \n";
 
 $allCoffee = new AllCoffeesWay();
-echo $allCoffee->makeCoffee();
-echo $allCoffee->latteMaker();
-echo $allCoffee->cappuccinoMaker();
-echo $allCoffee->machineName;
+echo $allCoffee->makeCoffee().'<br>';
+echo $allCoffee->latteMaker().'<br>';
+echo $allCoffee->cappuccinoMaker().'<br>';
+
 
 echo "*____________________* \n";
 

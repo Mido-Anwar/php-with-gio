@@ -2,8 +2,7 @@
 namespace App\CoffeeMaker;
 
 trait LatteTrait{
-    protected string $machineName = 'Latte-Maker';
-       public function latteMaker(){
-        return static::class . ' is making Latte' . PHP_EOL;
+       public function latteMaker($name =" "){
+        return static::class . ' is making Latte'. "By  {$name}  " .'<br>';
     }
 }

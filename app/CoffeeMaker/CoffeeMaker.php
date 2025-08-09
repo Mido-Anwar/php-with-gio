@@ -36,13 +36,17 @@ class MyClass {
 
 /* $obj = new MyClass();
  $obj->greet(); //  خطأ لأنها أصبحت private */
-interface CoffeeMachine{
 
-}
+interface CoffeeMachine {}
 
-class CoffeeMaker {
-   
-    public static function makeCoffee(){
-        return static::class . ' is making Coffee black'. PHP_EOL;
+class CoffeeMaker
+{
+
+    protected static string $machineName = 'BlackCoffee-Maker';
+
+
+    public static function makeCoffee()
+    {
+        return static::class . ' is making Coffee black ' . "  By  { " . static::$machineName .' }<br>';
     }
 }
