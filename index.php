@@ -1,10 +1,6 @@
 <?php
 require_once "vendor/autoload.php";
-use App\CoffeeMaker\CoffeeMaker;
-use App\CoffeeMaker\Cappuccino;
-use App\CoffeeMaker\Latte;
-use App\CoffeeMaker\AllCoffeesWay;
-use App\Employee\EmployeeClass;
+
 
 class A{
     public static $name ='A';
@@ -54,26 +50,7 @@ class B extends A{
 //var_dump(A::make());
 //var_dump(B::make());
 
-$coffee = new CoffeeMaker();
-echo $coffee->makeCoffee().'<br>';
-echo "*____________________* \n";
-$cappuccino = new Cappuccino();
-echo $cappuccino->makeCoffee().'<br>';
-echo $cappuccino->cappuccinoMaker().'<br>';
-echo "*____________________* \n";
 
-$latte = new Latte();
-echo $latte ->makeCoffee().'<br>';
-echo $latte->latteMaker().'<br>';
-echo "*____________________* \n";
-
-$allCoffee = new AllCoffeesWay();
-echo $allCoffee->makeCoffee().'<br>';
-echo $allCoffee->latteMaker().'<br>';
-echo $allCoffee->cappuccinoMaker().'<br>';
-
-
-echo "*____________________* \n";
 
 
 

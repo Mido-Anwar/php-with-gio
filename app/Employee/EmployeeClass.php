@@ -3,7 +3,7 @@
 namespace App\Employee;
 
 
-use APP\Employee\EmployeeIF;
+use App\Employee\EmployeeIF;
 
 class EmployeeClass implements EmployeeIF
 {
@@ -22,7 +22,7 @@ class EmployeeClass implements EmployeeIF
     }
     public function bounceCollect()
     {
-        return "hello";
+        return "10+";
     }
 
     public function setSalary(float $salary): EmployeeClass
