@@ -102,8 +102,12 @@ use App\CoffeeMaker\AllCoffeesWay;
     echo $allCoffee->cappuccinoMaker() . '<br>';
 
 
-    echo "*____________________* \n";
+    echo "*____________________* <br>";
 
+    echo "*____________________* <br>";
+
+    $anony = new class {};
+    var_dump(get_class($anony)) . '<br>';
     ?>
 
 
