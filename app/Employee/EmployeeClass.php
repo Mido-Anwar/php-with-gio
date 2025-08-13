@@ -4,6 +4,7 @@ namespace App\Employee;
 
 
 use App\Employee\EmployeeIF;
+use Exception;
 
 class EmployeeClass implements EmployeeIF
 {
@@ -19,6 +20,9 @@ class EmployeeClass implements EmployeeIF
         $this->name = $name;
         $this->age = $age;
         $this->position = $position;
+        if(empty($this->name)){
+            throw new \Exception('name empty');
+        }
     }
     public function bounceCollect()
     {

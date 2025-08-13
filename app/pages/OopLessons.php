@@ -34,7 +34,7 @@ use App\CoffeeMaker\AllCoffeesWay;
 
 
     // Example of creating an object of the Employee class
-    $employee = new EmployeeClass("John Doe", 30, "Software Engineer")
+    $employee = new EmployeeClass("", 30, "Software Engineer")
         ->setSalary(5200)
         ->AddTax(15)->ApplyDiscount(10);
     echo "Employee Name: " . $employee->name . "<br>";
