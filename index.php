@@ -2,22 +2,25 @@
 require_once "vendor/autoload.php";
 
 
-class A{
-    public static $name ='A';
+class A
+{
+    public static $name = 'A';
 
-    public static function get_name():string{
+    public static function get_name(): string
+    {
         // late static binding
         return static::$name;
     }
-    public static function make(){
+    public static function make()
+    {
         // return same object
         return static::class;
     }
 }
 
-class B extends A{
-    public static $name ='B';
-
+class B extends A
+{
+    public static $name = 'B';
 }
 ?>
 <!DOCTYPE html>
@@ -45,11 +48,18 @@ class B extends A{
         <a href="app/Pages/datetime.php">Date Time Object</a>
 
     </div>
-<?php
-//echo(A::get_name()).PHP_EOL;
-//echo(B::get_name()).PHP_EOL;
-//var_dump(A::make());
-//var_dump(B::make());
+
+
+    <?php
+    //echo(A::get_name()).PHP_EOL;
+    //echo(B::get_name()).PHP_EOL;
+    //var_dump(A::make());
+    //var_dump(B::make());
+
+    $headers = getallheaders();
+    foreach ($headers as $name => $value) {
+     echo   "$name: $value<br>";
+    }
 
 
 
@@ -58,9 +68,7 @@ class B extends A{
 
 
 
-
-
-?>
+    ?>
 
 </body>
 

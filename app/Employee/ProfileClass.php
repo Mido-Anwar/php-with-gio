@@ -2,12 +2,12 @@
 
 namespace App\Employee;
 
-class ProfileClass
+class ProfileClass 
 {
     public string $name;
     public int $age;
     public string $position;
-    private float $salary;
+    public float $salary;
     public const  STATUS = "paid";
     public static int $count = 0;
     public function __construct(string $name, int $age, string $position)
