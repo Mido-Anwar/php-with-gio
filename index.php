@@ -1,6 +1,8 @@
 <?php
 require_once "vendor/autoload.php";
 
+use App\Home\Home;
+use App\Router\Router;
 
 class A
 {
@@ -58,20 +60,17 @@ class B extends A
     //var_dump(A::make());
     //var_dump(B::make());
 
-    $headers = getallheaders();
-    foreach ($headers as $name => $value) {
-     echo   "$name: $value<br>";
-    }
+    //   $headers = getallheaders();
+    //   foreach ($headers as $name => $value) {
+    //    echo   "$name: $value<br>";
+    //   }
+    $router = new Router();
 
-
-
-
-
-
-
+    $router->register("/home", [Home::class , 'index'])
+        ->register("/about", fn() => "دي صفحة about");
+    echo  $router->resolve($_SERVER['REQUEST_URI']);
 
     ?>
-
 </body>
 
 </html>
