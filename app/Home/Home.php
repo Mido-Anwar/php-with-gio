@@ -4,17 +4,16 @@ declare(strict_types=1);
 
 namespace App\Home;
 
+use App\Config\Config;
+
 class Home
 {
 
     public  function index(): string
     {
-        setcookie(
-            'messege',
-            'hello mido',
-            time() + 10
-        );
-        return '   <!-- <!DOCTYPE html>
+
+        return <<<HTML
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -39,8 +38,9 @@ class Home
         <a href="app/Pages/datetime.php">Date Time Object</a>
         <a href="app/Pages/superglobals.php">Php Super Globals</a>
     </div>
-     </body>
-   </html> -->';
+</body>
+</html>
+HTML;
     }
     public  function create(): string
     {
@@ -55,5 +55,21 @@ class Home
     {
         $amount = $_POST['amount'];
         var_dump($amount);
+    }
+
+    public function filesUpload(): string
+    {
+        return <<< FORM
+    <form action="/home/upload" method="post" enctype="multipart/form-data" >
+    <input type="file" name="image" id="">
+    <button type="submit">upload</button>
+     </form>
+    FORM;
+    }
+    public function upload()
+    {   
+        var_dump(Config::$storagePath);
+        $filePath = Config::$storagePath . DIRECTORY_SEPARATOR . $_FILES['image']['name'];
+        move_uploaded_file($_FILES['image']['tmp_name'], $filePath);
     }
 }

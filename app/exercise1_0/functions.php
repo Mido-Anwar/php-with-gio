@@ -1,6 +1,6 @@
 <?php
-require_once '../pages/config.php';
-$file = fopen(APP . DIRECTORY_SEPARATOR . "exercise1_0" .DIRECTORY_SEPARATOR ."dataSheet.txt", "a+");
+
+$file = fopen("dataSheet.txt", "a+");
 
 
 if(isset($_POST['submit'])){
