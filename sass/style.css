@@ -1,75 +1,58 @@
-* {
-  box-sizing: border-box;
+body {
+  background: #f7f9fb;
+  font-family: "Segoe UI", Arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-family: "Arial", sans-serif;
-}
-
-form {
-  background-color: #f2f2f2;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-body {
-  background-color: #f2efef;
-  color: #333;
-  line-height: 1.6;
-  padding: 20px;
-}
-
-h1, h2, h3 {
-  color: #cd293c;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .links {
+  margin: 60px auto 30px auto;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+  background: #fff;
+  padding: 32px 24px;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+  max-width: 800px;
 }
 
-form {
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  max-width: 40%;
-  gap: 10px;
-  margin-bottom: 20px;
-  background-color: #5c5a5a;
-}
-
-input {
-  height: 30px;
-}
-
-a {
-  color: #033f7b;
+.links a {
+  display: inline-block;
+  background: #181c20;
+  color: #fff;
   text-decoration: none;
-  font-size: 1.2em;
-  font-weight: bold;
-  transition: color 0.3s;
-  text-shadow: #033f7b 1px 1px 2px;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(24, 28, 32, 0.04);
+  border: 1px solid #181c20;
 }
 
-p {
-  color: blue;
-  background-color: darkgoldenrod;
+.links a:hover {
+  background: #61dafb;
+  color: #181c20;
+  border-color: #61dafb;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
+h1 {
+  margin-top: 30px;
+  color: #181c20;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.page-user {
   margin-top: 20px;
-}
-
-th, td {
-  padding: 10px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-th {
-  background-color: #cd293c;
-  color: white;
+  color: #555;
+  font-size: 1.2rem;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
