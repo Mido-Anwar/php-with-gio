@@ -23,6 +23,6 @@
         <a href="app/Pages/datetime.php">Date Time Object</a>
         <a href="app/Pages/superglobals.php">Php Super Globals</a>
     </div>
-    <?= $this->name?>
+    <?= $name?>
 </body>
 </html>
