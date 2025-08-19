@@ -1,9 +1,10 @@
 <?php
 
+use App\Config\Config;
 use App\Router\Router;
 use App\Controller\Home;
 use App\View\View;
-
+use App\DataBase\DataBase;
 $router = new Router();
 try {
     $router->get("/", [Home::class, 'index'])
@@ -20,3 +21,6 @@ try {
 
     echo View::make('404');
 }
+$db= new DataBase(Config::$envFile);
+
+
