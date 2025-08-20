@@ -9,6 +9,15 @@ body {
   align-items: center;
 }
 
+code {
+  width: 50%;
+  background: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: "Courier New", Courier, monospace;
+  text-wrap: w;
+}
+
 .links {
   margin: 60px auto 30px auto;
   display: flex;

@@ -21,6 +21,4 @@ try {
 
     echo View::make('404');
 }
-$db= new DataBase(Config::$envFile);
-
 
