@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\Router;
 
-
+use App\DataBase\DataBase;
 use App\Router\RouteFoundException;
 
-class Router
+class Router 
 {
     private array $routes = [];
 

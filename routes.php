@@ -22,3 +22,5 @@ try {
     echo View::make('404');
 }
 
+
+var_dump(DataBase::select('users')); // For debugging purposes, to check the database connection
