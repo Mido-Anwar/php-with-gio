@@ -19,7 +19,6 @@ class DataBase
         }
         return self::$connection;
     }
-
     public static function select(string $table, array $columns = ["*"]): array
     {
         $conn = self::connect(); // يتأكد إن الاتصال موجود
@@ -29,4 +28,6 @@ class DataBase
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+
 }
