@@ -24,6 +24,7 @@ class DataBase
         $conn = self::connect(); // يتأكد إن الاتصال موجود
 
         $cols = implode(", ", $columns);
+        var_dump($cols."<br>"); // For debugging purposes, to check the columns being selected
         $stmt = $conn->prepare("SELECT $cols FROM $table");
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
