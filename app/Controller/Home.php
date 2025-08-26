@@ -13,7 +13,7 @@ class Home
     public  function index(): View
     {
 
-        return View::make('home/index', ["name" => 'mido']);
+        return View::make('home/index');
     }
     public  function create(): string
     {

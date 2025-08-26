@@ -5,6 +5,9 @@ use App\Router\Router;
 use App\Controller\Home;
 use App\View\View;
 use App\DataBase\DataBase;
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 $router = new Router();
 try {
     $router->get("/", [Home::class, 'index'])
@@ -23,4 +26,5 @@ try {
 }
 
 
-var_dump(DataBase::select('users')); // For debugging purposes, to check the database connection
+echo $_ENV['DB_HOST']; // 127.0.0.1
+echo $_ENV['DB_USERNAME']; // mydb// For debugging purposes, to check the database connection
