@@ -10,18 +10,22 @@
 
 <body>
     <div class="links">
-        <a href="app/Pages/basicsofphp.php"> basic of php </a>
-        <a href="app/Pages/variables-typeCassting.php"> variables & type casting </a>
-        <a href="app/Pages/arrays.php"> arrays </a>
-        <a href="app/Pages/oprator.php"> operators </a>
-        <a href="app/Pages/controlStructures.php"> control structures </a>
-        <a href="app/Pages/functions.php"> functions </a>
-        <a href="app/Pages/bulitInFunction.php"> built in functions </a>
-        <a href="app/Pages/fileSystem.php"> file system </a>
-        <a href="app/Pages/ex1.php"> exercise 1 </a>
-        <a href="app/Pages/OopLessons.php"> oop </a>
-        <a href="app/Pages/datetime.php">Date Time Object</a>
-        <a href="app/Pages/superglobals.php">Php Super Globals</a>
+ <table>
+    <thead>
+        <tr>id</tr>
+        <tr>name</tr>
+        <tr>email</tr>
+    </thead>
+    <tbody>
+        <?php foreach($users as $user): ?>
+        <tr>
+            <td><?= $user['id'] ?></td>
+            <td><?= $user['full_name'] ?></td>
+            <td><?= $user['email'] ?></td>
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
+ </table>
     </div>
    
 </body>

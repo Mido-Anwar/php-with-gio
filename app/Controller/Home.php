@@ -5,24 +5,20 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use App\Config\Config;
+use App\Model\User;
 use App\View\View;
 
 class Home
 {
 
-    public  function index(): View
+    public function index(): View
     {
-
-        return View::make('home/index');
+        $users = User::all('users', ['id', 'full_name', 'email']);
+        return View::make('home/index', ['users' => $users]);
     }
-    public  function create(): string
+    public function create(): View
     {
-        return '       
-            <form action="/home/create" method="post">
-            <label for="amount">amount</label>
-            <input name="amount" type="text">
-            </form> 
-               ';
+        return View::make('home/create');
     }
     public  function store()
     {

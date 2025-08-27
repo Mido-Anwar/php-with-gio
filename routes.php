@@ -10,13 +10,16 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 $router = new Router();
 try {
-    $router->get("/", [Home::class, 'index'])
+    $router->get("/dashboard", [Home::class, 'index'])
+        ->get("/", function () {
+            return View::make('welcome');
+        })
         ->get("/home/create", [Home::class, 'create'])
         ->get("/download", [Home::class, 'download'])
         ->get("/home/imageupload", [Home::class, 'filesUpload'])
         ->post("/home/upload", [Home::class, 'upload'])
-        ->post("/home/create", [Home::class, 'store'])
-        ->get("/about", fn() => "دي صفحة about");
+        ->post("/home/create", [Home::class, 'store']);
+       
 
     echo $router->resolve($_SERVER['REQUEST_URI'], strtolower($_SERVER['REQUEST_METHOD']));
 } catch (App\Router\RouteFoundException $e) {

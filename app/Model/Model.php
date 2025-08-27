@@ -7,10 +7,20 @@ use App\DataBase\DataBase;
 
 class Model extends DataBase
 {
+   public static function select(string $table, array $columns = ["*"]): array
+    {
+        $conn = self::connect(); // يتأكد إن الاتصال موجود
 
+        $cols = implode(", ", $columns);
+        // For debugging purposes, to check the columns being selected
+        $stmt = $conn->prepare("SELECT $cols FROM $table");
+        $stmt->execute();
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
+    
     public static function all(string $table, array $columns = ["*"]): array
     {
-        return DataBase::select($table, $columns);
+        return self::select($table, $columns);
     }
 
     public static function create(string $table, array $data): bool
