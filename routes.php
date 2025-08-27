@@ -26,5 +26,5 @@ try {
 }
 
 
-echo $_ENV['DB_HOST']; // 127.0.0.1
-echo $_ENV['DB_USERNAME']; // mydb// For debugging purposes, to check the database connection
+ // 127.0.0.1
+ // mydb// For debugging purposes, to check the database connection

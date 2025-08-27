@@ -1,19 +1,21 @@
 <?php
+
 namespace App\DataBase;
 
+use App\Config\Config;
 use PDO;
 
-class DataBase
+class DataBase extends Config
 {
     private static ?PDO $connection = null;
 
-    private static function connect(): PDO
+    protected static function connect(): PDO
     {
         if (self::$connection === null) {
             self::$connection = new PDO(
-                "mysql:host=127.0.0.1;port=3306;dbname=gio",
-                "ahmed_nour",
-                "Mido_aqaqaq_4688"
+                self::envProps("db_connection") . ":host=" . self::envProps("db_host") . self::envProps("db_host") . ";dbname=" . self::envProps("db_database"),
+                self::envProps("db_username"),
+                self::envProps("db_password")
             );
             self::$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         }
@@ -29,6 +31,4 @@ class DataBase
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-
-
 }
