@@ -10,18 +10,18 @@
 
 <body>
     <div class="links">
-        <a href="app/Pages/basicsofphp.php"> basic of php </a>
-        <a href="app/Pages/variables-typeCassting.php"> variables & type casting </a>
-        <a href="app/Pages/arrays.php"> arrays </a>
-        <a href="app/Pages/oprator.php"> operators </a>
-        <a href="app/Pages/controlStructures.php"> control structures </a>
-        <a href="app/Pages/functions.php"> functions </a>
-        <a href="app/Pages/bulitInFunction.php"> built in functions </a>
-        <a href="app/Pages/fileSystem.php"> file system </a>
-        <a href="app/Pages/ex1.php"> exercise 1 </a>
-        <a href="app/Pages/OopLessons.php"> oop </a>
-        <a href="app/Pages/datetime.php">Date Time Object</a>
-        <a href="app/Pages/superglobals.php">Php Super Globals</a>
+        <a href="Pages/basicsofphp.php"> basic of php </a>
+        <a href="Pages/variables-typeCassting.php"> variables & type casting </a>
+        <a href="Pages/arrays.php"> arrays </a>
+        <a href="Pages/oprator.php"> operators </a>
+        <a href="Pages/controlStructures.php"> control structures </a>
+        <a href="Pages/functions.php"> functions </a>
+        <a href="Pages/bulitInFunction.php"> built in functions </a>
+        <a href="Pages/fileSystem.php"> file system </a>
+        <a href="Pages/ex1.php"> exercise 1 </a>
+        <a href="Pages/OopLessons.php"> oop </a>
+        <a href="Pages/datetime.php">Date Time Object</a>
+        <a href="Pages/superglobals.php">Php Super Globals</a>
         <a href="home/create">create user</a>
     </div>
    
