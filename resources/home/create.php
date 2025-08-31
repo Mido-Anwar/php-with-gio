@@ -1,17 +1,26 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="./../../sass/style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <form action="/home/create" method="post">
-        <label for="amount">amount</label>
-        <input name="amount" type="text">
-    </form>
+<!-- views/home/create.php -->
+<h2>Create New User</h2>
+<form action="/home/create" method="post">
+    <label for="full_name">Full Name:</label>
+    <input type="text" name="full_name" id="full_name" required>
+    <br><br>
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required>
+    <br><br>
+    <button type="submit">Create User</button>
+</form>
 </body>
 
 </html>

@@ -30,7 +30,7 @@ class View
         // }
         extract($this->params);
         ob_start();
-        include $path;
+        include $path ;
         return ob_get_clean();
     }
 

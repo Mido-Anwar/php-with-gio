@@ -12,9 +12,12 @@
     <div class="links">
  <table>
     <thead>
-        <tr>id</tr>
-        <tr>name</tr>
-        <tr>email</tr>
+        <tr>
+            <th>ID</th>
+            <th>Full Name</th>
+            <th>Email</th>
+        </tr>
+        
     </thead>
     <tbody>
         <?php foreach($users as $user): ?>

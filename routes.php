@@ -40,6 +40,6 @@ try {
     echo View::make('404');
 }
 
-var_dump(new User());
+
  // 127.0.0.1
  // mydb// For debugging purposes, to check the database connection

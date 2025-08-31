@@ -18,3 +18,12 @@ class Config
     public static $viewsPath = VIEWS_PATH;
     public static $envFile = ENV_FILE;
 }
+// دالة لإدراج ملفات CSS
+function loadCSS($filename) {
+    echo '<link rel="stylesheet" type="text/css" href="/sass/' . $filename . '.css">';
+}
+
+// دالة لإدراج ملفات JavaScript
+function loadJS($filename) {
+    echo '<script src="/public/js/' . $filename . '.js"></script>';
+}

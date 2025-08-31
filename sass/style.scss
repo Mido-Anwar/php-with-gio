@@ -63,3 +63,86 @@ h1 {
     font-size: 1.2rem;
     text-align: center;
 }
+
+table {
+  width: 80%;
+  margin: 24px auto;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #eaeaea;
+}
+
+th {
+  background: #f7f9fb;
+  color: #181c20;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover {
+  background: #f0f8ff;
+}
+
+/* نموذج إنشاء المستخدم */
+form {
+  background: #fff;
+  padding: 32px 28px;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(24,28,32,0.07);
+  max-width: 400px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+form label {
+  font-weight: 500;
+  color: #181c20;
+  margin-bottom: 6px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"] {
+  padding: 10px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 7px;
+  font-size: 1rem;
+  background: #f7f9fb;
+  transition: border 0.2s;
+}
+
+form input:focus {
+  border-color: #61dafb;
+  outline: none;
+}
+
+form button[type="submit"] {
+  background: #181c20;
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  border-radius: 7px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+form button[type="submit"]:hover {
+  background: #61dafb;
+  color: #181c20;
+}
