@@ -10,6 +10,7 @@
 
 <body>
     <div class="links">
+        <a href="home/create">create new user</a>
  <table>
     <thead>
         <tr>

@@ -30,7 +30,7 @@ try {
         ->get("/download", [Home::class, 'download'])
         ->get("/home/imageupload", [Home::class, 'filesUpload'])
         ->post("/home/upload", [Home::class, 'upload'])
-        ->post("/home/create", [Home::class, 'store']);
+        ->post("/home/store", [Home::class, 'store']);
 
 
     echo $router->resolve($_SERVER['REQUEST_URI'], strtolower($_SERVER['REQUEST_METHOD']));

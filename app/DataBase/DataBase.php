@@ -21,7 +21,9 @@ class DataBase extends Config
         }
         return self::$connection;
     }
-     public static function select(string $table, array $columns = ["*"]): array
+
+
+    public static function select(string $table, array $columns = ["*"]): array
     {
         $conn = self::connect(); // يتأكد إن الاتصال موجود
 
@@ -31,20 +33,39 @@ class DataBase extends Config
         $stmt->execute();
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
-    
+
     public static function all(string $table, array $columns = ["*"]): array
     {
         return self::select($table, $columns);
     }
 
+
+    
+
     public static function create(string $table, array $data): bool
     {
         $conn = self::connect();
-        $columns = implode(", ", array_keys($data));
-        $placeholders = ":" . implode(", :", array_keys($data));
+
+        // أسماء الأعمدة
+        $columns = implode(", ", array_keys($data)) . ", is_active, created_at";
+
+        // placeholders زي :name, :email
+        $placeholders = implode(", ", array_map(fn($col) => ":" . $col, array_keys($data))) . ", 1, NOW()";
+
+        // SQL
         $sql = "INSERT INTO $table ($columns) VALUES ($placeholders)";
+
         $stmt = $conn->prepare($sql);
-        return $stmt->execute($data);
+
+        if ($stmt === false) {
+            throw new \Exception("Failed to prepare statement");
+        }
+
+        // ربط القيم
+        foreach ($data as $key => $value) {
+            $stmt->bindValue(":" . $key, $value);
+        }
+
+        return $stmt->execute();
     }
- 
 }

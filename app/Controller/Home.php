@@ -22,8 +22,16 @@ class Home
     }
     public  function store()
     {
-        $amount = $_POST['amount'];
-        var_dump($amount);
+     
+        $request = $_POST;
+
+        if (User::create(User::$table, $request)) {
+            // نجاح → تحويل للصفحة الرئيسية
+            header("Location: /home/create");
+            exit;
+        } else {
+            echo "فشل الحفظ في قاعدة البيانات";
+        }
     }
 
     public function filesUpload(): string
