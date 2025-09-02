@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?= loadCSS('sass/style.css') ?>
     <title>variables</title>
 </head>
 
@@ -75,7 +76,7 @@
         echo "<br>";
         // Type juggling in PHP
         // PHP automatically converts between types when necessary, known as type juggling
-        $mixedVar = "5 apples";
+        $mixedVar = "5";
         $result = $mixedVar + 5; // PHP converts the string to an integer
         echo "Result of type juggling: " . $result; // Outputs 10, as "5 apples" is converted to 5
         echo "<br>";
@@ -105,6 +106,7 @@ EOD;
 
         ?>
     </p>
+    <?= loadJS('js/script.js') ?>
 </body>
 
 </html>

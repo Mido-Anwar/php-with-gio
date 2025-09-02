@@ -4,10 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <?=loadCSS('sass/style.css')?>
     <title> Functions </title>
 </head>
 
 <body>
+
+
+<div>
     <?php
     echo "<h1>Functions in PHP</h1>";
     echo "<h2> require - include - require_once - include_once</h2>";
@@ -105,46 +109,20 @@ return ; // This function does not return any value
     $anonymousFunction = function ($name) {
         return "Hello, $name!";
     };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    echo "parameterized function";
+    function parameterizedFunction(...$name):array
+    {
+        return ["Hello", ...$name];
+    }
+    echo "<h2>Parameterized function</h2>";
+    print_r(parameterizedFunction("John", "Doe", "Mido"));
+    echo "<p>In the above example, we define a parameterized function that takes a variable number of arguments using the <code>...</code> syntax and returns an array containing a greeting message followed by the names passed as arguments.</p>";
+    echo "<h2>Arrow function</h2>";
+    $arrowFunction = fn($name) => "Hello, $name!";
+    echo "<p>In the above example, we define an arrow function that takes a parameter <code>\$name</code> and returns a greeting message. Arrow functions are a more concise syntax for writing anonymous functions in PHP.</p>";
+    echo $arrowFunction("Mido");
+?>
+</div>
 </body>
 
 </html>

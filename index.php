@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once "vendor/autoload.php";
 include_once "routes.php";
 include_once "app/Config/Config.php";

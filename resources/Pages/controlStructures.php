@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../sass/style.css">
+    <?=loadCSS('sass/style.css')?>
     <link rel="stylesheet" href="">
     <title>ControlStructure</title>
 </head>
@@ -140,14 +140,14 @@ PHP code.</p>";
         60, 69 => print "You got a D! <br>",
         default => print "You got an F! <br>"   
     }
-
+    
     ?>
     <p>For more information, you can refer to the official PHP documentation on <a  href="https://www.php.net/manual/en/language.control-structures.php">Control Structures</a>.</p>
     <p>Happy coding!</p>
 
 
 
-
+        <?=loadJS('js/script.js')?>
 
 </body>
 
