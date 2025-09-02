@@ -1,0 +1,156 @@
+body {
+  background: #f7f9fb;
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+code {
+  width: 60%;
+  background: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: "Courier New", Courier, monospace;
+  text-wrap: whitespace pre-wrap;
+}
+.links {
+  margin: 60px auto 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+  background: #fff;
+  padding: 32px 24px;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+  max-width: 800px;
+}
+
+.links a {
+  display: inline-block;
+  background: #181c20;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(24, 28, 32, 0.04);
+  border: 1px solid #181c20;
+}
+
+.links a:hover {
+  background: #61dafb;
+  color: #181c20;
+  border-color: #61dafb;
+}
+
+h1 {
+  margin-top: 30px;
+  color: #181c20;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.page-user {
+  margin-top: 20px;
+  color: #555;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+table {
+  margin: 24px auto;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #eaeaea;
+}
+
+th {
+  background: #f7f9fb;
+  color: #181c20;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover {
+  background: #f0f8ff;
+}
+
+/* نموذج إنشاء المستخدم */
+form {
+  background: #fff;
+  padding: 32px 28px;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(24, 28, 32, 0.07);
+  max-width: 400px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+form label {
+  font-weight: 500;
+  color: #181c20;
+  margin-bottom: 6px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"] {
+  padding: 10px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 7px;
+  font-size: 1rem;
+  background: #f7f9fb;
+  transition: border 0.2s;
+}
+
+form input:focus {
+  border-color: #61dafb;
+  outline: none;
+}
+
+form button[type="submit"] {
+  background: #181c20;
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  border-radius: 7px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+form button[type="submit"]:hover {
+  background: #61dafb;
+  color: #181c20;
+}
+a.danger  {
+  background-color: red;
+  color: white;
+}
+a.edit  {
+  background-color: rgb(72, 69, 209);
+  color: white;
+}

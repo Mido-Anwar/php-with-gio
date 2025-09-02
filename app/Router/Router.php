@@ -17,7 +17,7 @@ class Router
         return $this;
     }
 
-    public function get(string $route, callable|array $action): self
+    public function get(string $route, callable|array $action ,$params =null): self
     {
         return $this->register('get', $route, $action);
     }

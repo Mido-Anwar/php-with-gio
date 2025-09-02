@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="sass/style.css">
+    <?= loadCSS('sass/style.css') ?>
     <title>basics of php </title>
 </head>
 
@@ -24,6 +24,6 @@
         <a href="Pages/superglobals.php">Php Super Globals</a>
         <a href="dashboard">dashboard</a>
     </div>
-   
+   <?= loadJS('js/script.js') ?>
 </body>
 </html>

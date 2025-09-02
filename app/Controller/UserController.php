@@ -8,7 +8,7 @@ use App\Config\Config;
 use App\Model\User;
 use App\View\View;
 
-class Home
+class UserController
 {
 
     public function index(): View
@@ -19,6 +19,10 @@ class Home
     public function create(): View
     {
         return View::make('home/create');
+    }
+       public function edit($id): View
+    {
+        return View::make('home/edit');
     }
     public  function store()
     {

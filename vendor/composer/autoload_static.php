@@ -13,6 +13,7 @@ class ComposerStaticInit7422faf8f33d1f1cdfca8767e0ffc0f4
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
+        'b1691056331731b57483ed3051179c94' => __DIR__ . '/../..' . '/app/Config/Helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (

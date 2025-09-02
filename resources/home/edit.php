@@ -12,7 +12,7 @@
 <body>
 <!-- views/home/create.php -->
 <h2>Create New User</h2>
-<form action="/home/store" method="post">
+<form action="/home/update" method="post">
     <label for="full_name">Full Name:</label>
     <input type="text" name="full_name" id="full_name" required>
     <br><br>

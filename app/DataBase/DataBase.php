@@ -68,4 +68,38 @@ class DataBase extends Config
 
         return $stmt->execute();
     }
+
+    public static function update(string $table, array $data, string $where, array $whereParams = []): bool
+    {
+        $conn = self::connect();
+
+        // إنشاء جزء التحديث
+        $setParts = [];
+        foreach ($data as $key => $value) {
+            $setParts[] = "$key = :$key";
+        }
+        $setString = implode(", ", $setParts);
+
+        // SQL
+        $sql = "UPDATE $table SET $setString WHERE $where";
+
+        $stmt = $conn->prepare($sql);
+
+        if ($stmt === false) {
+            throw new \Exception("Failed to prepare statement");
+        }
+
+        // ربط القيم
+        foreach ($data as $key => $value) {
+            $stmt->bindValue(":" . $key, $value);
+        }
+
+        // ربط قيم where
+        foreach ($whereParams as $key => $value) {
+            $stmt->bindValue(":" . $key, $value);
+        }
+
+        return $stmt->execute();
+    }
+    
 }
