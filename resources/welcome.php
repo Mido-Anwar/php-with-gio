@@ -24,6 +24,20 @@
         <a href="Pages/superglobals.php">Php Super Globals</a>
         <a href="dashboard">dashboard</a>
     </div>
-   <?= loadJS('js/script.js') ?>
+    <div>
+        <?php
+
+    use App\DataBase\Queries;
+
+ $data = new Queries(new \App\DataBase\DataBase());
+    $users = $data->all("users");
+
+    print_r($users);
+
+
+        ?>
+    </div>
+    <?= loadJS('js/script.js') ?>
 </body>
+
 </html>

@@ -1,11 +1,9 @@
 <?php
 
-use Psr\Container\ContainerInterface;
-use Psr\Container\ContainerExceptionInterface;
-use Psr\Container\NotFoundExceptionInterface;
 
 
-class Container implements ContainerInterface
+
+class Container 
 {
 
     public function get($id) {}
