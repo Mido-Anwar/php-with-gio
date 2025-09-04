@@ -1,6 +1,5 @@
 <?php
-require_once "config.php";
-require_once APP . 'exercise1_0/functions.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +9,7 @@ require_once APP . 'exercise1_0/functions.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>exercise 1</title>
-    <link rel="stylesheet" href="../../sass/style.css">
+    <?php loadCSS('sass/style.css'); ?>
 </head>
 
 <body>
@@ -37,11 +36,11 @@ require_once APP . 'exercise1_0/functions.php';
                 // قراءة البيانات من الملف وعرضها في الجدول
                 $file = fopen(APP . DIRECTORY_SEPARATOR . "exercise1_0" . DIRECTORY_SEPARATOR . "dataSheet.txt", "r");
                 if ($file) {
-                
-                    while (($line = fgets($file)) !== false ) {
-                       
+
+                    while (($line = fgets($file)) !== false) {
+
                         $data = explode(',', $line);
-                
+
                         if (count($data) == 3) {
                             echo "<tr>";
                             echo "<td> \t " . htmlspecialchars(trim($data[0])) . " </td>";
@@ -49,7 +48,6 @@ require_once APP . 'exercise1_0/functions.php';
                             echo "<td> \t " . htmlspecialchars(trim($data[2])) . " </td>";
                             echo "</tr>  ";
                         }
-                      
                     }
                     fclose($file);
                 } else {
